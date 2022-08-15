@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "5abd11b5-f393-49c0-a595-1b55435a746d",
+		"name": "EntityWebApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4507102"
+	},
+	"item": [
+		{
+			"name": "Invalid Requests",
+			"item": [
+				{
+					"name": "Create new -Empty error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/v1/storage/entity?insert=",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"v1",
+								"storage",
+								"entity"
+							],
+							"query": [
+								{
+									"key": "insert",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new -Invalid string",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/v1/storage/entity?insert=\"{\"id\":\"cfaa0d3f-7fea-4423-9f69-ebff826e2f89\",\"operationDate\":\"2019-04-02T13:10:20.0263632+03:00\",\"amount\":23.05}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"v1",
+								"storage",
+								"entity"
+							],
+							"query": [
+								{
+									"key": "insert",
+									"value": "\"{\"id\":\"cfaa0d3f-7fea-4423-9f69-ebff826e2f89\",\"operationDate\":\"2019-04-02T13:10:20.0263632+03:00\",\"amount\":23.05}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new -no id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/v1/storage/entity?insert={\"operationDate\":\"2019-04-02T13:10:20.0263632+03:00\",\"amount\":23.05}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"v1",
+								"storage",
+								"entity"
+							],
+							"query": [
+								{
+									"key": "insert",
+									"value": "{\"operationDate\":\"2019-04-02T13:10:20.0263632+03:00\",\"amount\":23.05}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new -no date",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/v1/storage/entity?insert={\"id\":\"cfaa0d3f-7fea-4423-9f69-ebff826e2f89\", \"amount\":23.05}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"v1",
+								"storage",
+								"entity"
+							],
+							"query": [
+								{
+									"key": "insert",
+									"value": "{\"id\":\"cfaa0d3f-7fea-4423-9f69-ebff826e2f89\", \"amount\":23.05}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new -no id and date",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/v1/storage/entity?insert={\"amount\":23.05}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"v1",
+								"storage",
+								"entity"
+							],
+							"query": [
+								{
+									"key": "insert",
+									"value": "{\"amount\":23.05}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new -invalid date",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44383/api/v1/storage/entity?insert={\"id\":\"cfaa0d3f-7fea-4423-9f69-ebff826e2f89\",\"operationDate\":\"2019-04-02T13:10:20.0263632+03:00\",\"amount\":23.05}",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44383",
+							"path": [
+								"api",
+								"v1",
+								"storage",
+								"entity"
+							],
+							"query": [
+								{
+									"key": "insert",
+									"value": "{\"id\":\"cfaa0d3f-7fea-4423-9f69-ebff826e2f89\",\"operationDate\":\"2019-04-02T13:10:20.0263632+03:00\",\"amount\":23.05}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44383/api/v1/storage/entity?insert={\"id\":\"c2aa0d3f-7fea-4423-9f69-ebff826e2f89\",\"operationDate\":\"2019-04-02T13:10:20.0263632\",\"amount\":213.05}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44383",
+					"path": [
+						"api",
+						"v1",
+						"storage",
+						"entity"
+					],
+					"query": [
+						{
+							"key": "insert",
+							"value": "{\"id\":\"c2aa0d3f-7fea-4423-9f69-ebff826e2f89\",\"operationDate\":\"2019-04-02T13:10:20.0263632\",\"amount\":213.05}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Entity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44383/api/v1/storage/entity/c2aa0d3f-7fea-4423-9f69-ebff826e2f89",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44383",
+					"path": [
+						"api",
+						"v1",
+						"storage",
+						"entity",
+						"c2aa0d3f-7fea-4423-9f69-ebff826e2f89"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
